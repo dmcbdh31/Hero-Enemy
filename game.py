@@ -1,4 +1,4 @@
-# this is mentally exhausting for me and not fun
+# when BePop wins, it does not go back to the beginning
 # the math is not adding up right...
 
 from Hero_Enemy import Hero, Enemy_one, Enemy_two, Enemy_three
@@ -35,9 +35,11 @@ while Hero['health'] > 0 and Enemy_one['Health'] > 0:
          
     if Hero['health'] > Enemy_one['Health']:
         print(f"{Hero['name']} defeated {Enemy_one['Name']}. You are moving up to Level 2.")
+        print(f"{Hero['name']} now has {Hero['equipment']}, {Enemy_one['Equipment']}")
         break
     else:
         print(f"{Enemy_one['Name']} defeated {Hero['name']}. Try again.") 
+        False    
 
 while Hero['health2'] > 0 and Enemy_two['Health'] > 0:
 
@@ -56,7 +58,6 @@ while Hero['health2'] > 0 and Enemy_two['Health'] > 0:
     print(" ")
 
     if Enemy_two['Health'] > 0:
-
         print(Enemy_two['Name'], "strikes with", random_attacks3[0])
     Hero['health'] -= random_attacks3[1]
     print(Hero['name'], "has",Hero['health'], "health left.")
@@ -69,9 +70,11 @@ while Hero['health2'] > 0 and Enemy_two['Health'] > 0:
          
     if Hero['health2'] > Enemy_one['Health']:
         print(f"{Hero['name']} defeated {Enemy_two['Name']}. You are moving up to Level 3.")
+        print(f"{Hero['name']} now has {Hero['equipment']}, {Enemy_one['Equipment']}, {Enemy_two['Equipment']}")
         break
     else:
         print(f"{Enemy_two['Name']} defeated {Hero['name']}. Try again.")
+        False
 
 while Hero['health3'] > 0 and Enemy_three['Health'] > 0:
 
@@ -103,6 +106,8 @@ while Hero['health3'] > 0 and Enemy_three['Health'] > 0:
          
     if Hero['health3'] > Enemy_one['Health']:
         print(f"{Hero['name']} defeated {Enemy_three['Name']}. You win.")
+        print(f"{Hero['name']} now has {Hero['equipment']}, {Enemy_one['Equipment']}, {Enemy_two['Equipment']}, {Enemy_three['Equipment']}")
         break
     else:
         print(f"{Enemy_three['Name']} defeated {Hero['name']}. Try again.")
+        False

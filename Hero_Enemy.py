@@ -46,7 +46,7 @@ Enemy_two = {
 }
 
 Enemy_three = {
-    'Name': 'Foot Clan',
+    'Name': 'The Foot Clan',
     'Level': 3,
     'Health': 100,
     'Equipment': 'Ninja Stars, Katana, Smoke Grenades',
